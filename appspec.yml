@@ -4,3 +4,22 @@ files:
   - source: /index.html
     destination: /var/www/html/
 
+hooks:
+Httpd_Instalaltion:
+- location: scripts/install_dependencies
+  timeout: 300
+  runas: root
+Starting_Httpd:
+- location: scripts/start_server.sh
+  timeout: 300
+  runas: root
+Stop_Server:
+- location: scripts/stop_server.sh
+  timeou: 300
+  runas: root
+
+
+     
+
+
+
